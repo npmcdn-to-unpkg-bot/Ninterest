@@ -8,5 +8,5 @@ var config = sConfig({
 });
 
 var myServer = new sServer(config.server, function(){
-		console.log('server start!');
-	});
+	console.log('server start!');
+});

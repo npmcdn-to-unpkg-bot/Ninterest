@@ -1,4 +1,5 @@
 'use strict';
+var path = require('path');
 
 exports.info = {
 	url: '/',
@@ -12,6 +13,6 @@ exports.postMiddleware = [
 ];
 
 exports.main = function(req, res, next) {
-	res.send('<h1>hello Swint!</h1>');
+	res.sendFile(path.join(__dirname, '../out/index.html'));
 	next();
 };

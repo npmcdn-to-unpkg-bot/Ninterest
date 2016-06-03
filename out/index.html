@@ -1,0 +1,53 @@
+<html>
+	<head>
+
+		<script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+
+		<style>
+		body {
+			outline: solid 1px;
+		}
+
+		body .grid {
+			outline: solid 1px;
+		}
+		.cardBox {
+			width: 200px;
+			outline: solid 1px;
+			margin: 5px;
+			display: inline-block;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 10 }'></div>
+	</body>
+
+	<script>
+
+	var Body = function(){
+		this.dom = document.querySelector('.grid');
+
+		this._addcard(10);
+	}
+
+	var _ = Body.prototype;
+
+	_._addcard = function(num){
+		for(var i=1; i<=num; i++){
+			var cardbox = new Cardbox(i);
+			this.dom.appendChild(cardbox.dom);
+		}
+	}
+
+	var Cardbox = function(num){
+		this.dom = document.createElement('div');
+		this.dom.classList.add('cardBox', 'grid-item');
+		this.dom.textContent = num;
+		this.dom.style.height = (200 + Math.floor((Math.random() * 200))) + 'px';
+	}
+
+
+	var body = new Body();
+	</script>
+</html>
