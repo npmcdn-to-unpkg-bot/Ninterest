@@ -1,0 +1,25 @@
+{
+  "name": "Ninterest",
+  "version": "1.0.0",
+  "description": "haha",
+  "main": "\u001b[D\u001b[D\u001b[D\u001bserver.js)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shleeland/Ninterest.git"
+  },
+  "author": "Lee SeungHun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shleeland/Ninterest/issues"
+  },
+  "homepage": "https://github.com/shleeland/Ninterest",
+  "dependencies": {
+    "path": "^0.12.7",
+    "swint-configure": "^1.0.2",
+    "swint-middleware": "^1.0.3",
+    "swint-server": "^1.0.2"
+  }
+}
